@@ -59,3 +59,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+**************************************************************************************
+ first step to config project
+************************************************************************************
+*Download lms project from git clone
+
+Run composer install
+From the projects root run cp .env.example .env
+Configure your .env file, with:
+Database settings
+
+DB_DATABASE=name you want
+DB_USERNAME=root
+DB_PASSWORD=
+ 
+ // then migrate datatable
+ // php artisan migrate
+
+****************************************************************************************
+second step
+*********************
+for run PermissionTableSeeder seeder run the next command 
+// php artisan db:seed --class=PermissionTableSeeder
+// php artisan db:seed --class=CreateAdminUserSeeder
+// php artisan serve
+
+if any problem happen use this command to clear cache
+// php artisan config:cache
